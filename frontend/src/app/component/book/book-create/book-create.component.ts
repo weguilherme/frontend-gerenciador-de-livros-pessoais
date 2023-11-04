@@ -71,7 +71,8 @@ export class BookCreateComponent implements OnInit{
     else{
         this.bookService.create(this.bookToApi).subscribe(() => {
           this.communicationService.triggerNgOnInit();
-          this.router.navigate(['/home'])
+          this.exception.showMensage('Livro salvo com sucesso','','toast-success')
+          this.cleanForm()
         })
     }
   }
@@ -81,7 +82,7 @@ export class BookCreateComponent implements OnInit{
   }
 
   searchBookInApi():void{
-      this.cleanForm();
+      this.cleanFormToSearch();
 
       this.googleBooksService.getBooksApi(this.bookToApi.title).subscribe((data) => {
         for(let x of data.items){
@@ -127,10 +128,20 @@ export class BookCreateComponent implements OnInit{
     this.numWords = this.bookToApi.description.length;
   }
 
-  cleanForm():void{
+  cleanFormToSearch():void{
     this.bookToApi.authors = ''
     this.bookToApi.description = ''
     this.bookSearch = []
+  }
+
+  cleanForm():void{
+    this.bookToApi.title = ''
+    this.bookToApi.authors = ''
+    this.bookToApi.description = ''
+    this.bookSearch = []
+    this.bookToApi.statusBook = this.statusBook[0]
+    this.bookToApi.genrers = []
+    this.bookToApi.imageLink = ''
   }
 
 }

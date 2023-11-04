@@ -30,6 +30,7 @@ export class LoginService {
       catchError(e => this.exceptions.userNotFound(e)))
     .subscribe(data => {
         sessionStorage.setItem('token',data.token)
+        this.exceptions.showMensage('Login success','Bem vindo','toast-success')
         this.router.navigate(['/home'])
       })
   }

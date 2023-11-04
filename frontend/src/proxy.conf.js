@@ -2,9 +2,10 @@
 const PROXY_CONFIG = [
     {
         context:['/api'],
-        target: 'http://localhost:8080/',
+        target: 'https://api-spring-book.onrender.com/',
         secure:false,
         logLevel:'debug',
+        changeOrigin:true,
         pathRewrite:{'^/api':''}
     }
 ];
