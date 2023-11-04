@@ -13,7 +13,7 @@ import { ExceptionsService } from '../../exception/exception-services/exceptions
 })
 export class LoginService {
 
-  baseUrl = '/api/'
+  baseUrl = 'https://api-spring-book.onrender.com/'
 
   private httpClient: HttpClient;
 
