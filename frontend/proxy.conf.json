@@ -1,0 +1,10 @@
+{
+  "context": ["/api"],
+  "target": "https://api-spring-book.onrender.com/",
+  "secure": false,
+  "logLevel": "debug",
+  "changeOrigin": true,
+  "pathRewrite": {
+    "^/api": ""
+  }
+}

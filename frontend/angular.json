@@ -94,11 +94,11 @@
           "configurations": {
             "production": {
               "browserTarget": "frontend:build:production",
-              "proxyConfig": "src/proxy.conf.js"
+              "proxyConfig": "proxy.conf.json"
             },
             "development": {
               "browserTarget": "frontend:build:development",
-              "proxyConfig": "src/proxy.conf.js"
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
