@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/api/:match*", "destination": "https://api-spring-book.onrender.com/:match*" }
+    { "source": "/api/:match*", "destination": "https://api-spring-book.onrender.com/" }
 
   ],
   "headers": [
